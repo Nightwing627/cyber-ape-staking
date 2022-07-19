@@ -5,3 +5,7 @@ export interface IContainer {
 export interface SocialsAnchorInterface {
   hoverColor: string;
 }
+
+export interface FusionChamberProps {
+  scrolled?: boolean;
+}

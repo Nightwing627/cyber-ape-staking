@@ -15,7 +15,7 @@ export const HomeContainer = styled.div`
 
   overflow-x: hidden;
   @media screen and (max-width: 600px) {
-    width: 200%;
+    width: 100%;
 
     margin: 0 auto;
 

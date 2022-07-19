@@ -1,6 +1,6 @@
 import { NextPage } from "next/types";
 import { useEffect, useState } from "react";
-import * as Diamonds from './Diamonds';
+import * as Diamonds from '../Diamonds';
 import { 
   RarityBtnElem, 
   RarityBtnContainer, 

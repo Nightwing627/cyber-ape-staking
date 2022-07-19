@@ -2,8 +2,7 @@ import styled from "styled-components";
 import { PAGE_MAX_WIDTH } from "../../constants";
 
 export const GlobalFooterContainer = styled.section`
-  margin-top:10rem;
-  width: 80%;
+  margin-top: 10rem;
 `;
 export const ComingSoonTitle = styled.h1`
   width: 100%;
@@ -23,7 +22,7 @@ export const CyberApeRendererWrapper = styled.div`
 
   @media screen and (max-width: 600px) {
     position: relative;
-  
+
     top: 0;
     bottom: 0;
   }
@@ -58,7 +57,7 @@ export const Discord = styled.a`
 export const LinksRowContainer = styled.div`
   display: flex;
   flex-direction: row;
-  width:80%;
+  width: 80%;
   gap: 8rem;
 `;
 

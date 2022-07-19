@@ -1,11 +1,9 @@
 import { NextPage } from "next";
-import { useRouter } from "next/router";
 import { useContext, useEffect, useMemo, useRef, useState } from "react";
 import styled from "styled-components";
 import { APE_DATA } from "../../constants/cyberapeage-data";
 import SuperModalContext from "../../contexts/SuperModal";
 import { getRandomApeIndex } from "../../utils";
-import BloomingContainer from "../BloomingContainer";
 import CyberApeRenderer from "../CyberApeRenderer";
 import SignatureButton from "../SignatureButton";
 import {
@@ -19,7 +17,6 @@ import {
 import { RoadmapMilestoneProps } from "./types";
 
 const BodyContainer = styled.div`
-  background: rgba(97, 97, 97, 0.08);
   border: 2px solid #101010;
   transform: matrix(1, 0, 0, 1, 0, 0);
   width: 40%;
@@ -27,6 +24,16 @@ const BodyContainer = styled.div`
   border: 20px solid;
   border-image: url("stair-border-roadmap.svg");
   border-image-slice: 16;
+`;
+
+const BackgroundBox = styled.div`
+  background: rgba(97, 97, 97, 0.08);
+  z-index: -10;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
 `;
 
 const BottomContainer = styled.div`
@@ -39,6 +46,7 @@ const BottomContainer = styled.div`
 const ApeContainer = styled.div`
   position: relative;
   top: 18px;
+  left: 30px;
 `;
 
 const RoadmapMilestone: NextPage<RoadmapMilestoneProps> = ({
@@ -57,7 +65,6 @@ const RoadmapMilestone: NextPage<RoadmapMilestoneProps> = ({
 
   const [isAboveMiddle, setIsAboveMiddle] = useState<boolean>(false);
   const { open } = useContext(SuperModalContext);
-  const router = useRouter();
 
   function license(): void {
     if (popupTitle != null && detailsPopup != null) {
@@ -86,6 +93,7 @@ const RoadmapMilestone: NextPage<RoadmapMilestoneProps> = ({
   return (
     <RoadmapMilestoneContainer ref={RoadmapMilestoneContainerRef}>
       <BodyContainer>
+        <BackgroundBox></BackgroundBox>
         <RoadmapMilestoneTitle>{title}</RoadmapMilestoneTitle>
         <RoadmapMilestoneDesc>{description}</RoadmapMilestoneDesc>
         <BottomContainer>
@@ -104,9 +112,9 @@ const RoadmapMilestone: NextPage<RoadmapMilestoneProps> = ({
           </ApeContainer>
           {popupTitle != null && detailsPopup != null && (
             <SignatureButton
-              backgroundColor={"#3"}
+              backgroundColor={"#1"}
               onClick={license}
-              accent="#11"
+              accent="#1"
             >
               DETAILS
             </SignatureButton>

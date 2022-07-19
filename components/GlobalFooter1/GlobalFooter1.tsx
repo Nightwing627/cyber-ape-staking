@@ -55,7 +55,7 @@ const GlobalFooter: NextPage = () => {
       <BloomingContainer
         accent="#444"
         customStyles={{
-          margin: "0rem 10rem",
+          margin: "0 auto",
           width: "100%",
           maxWidth: PAGE_MAX_WIDTH,
           position: "relative",

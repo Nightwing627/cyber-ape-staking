@@ -16,17 +16,17 @@ export const RoadmapContainer = styled.div`
   position: relative;
   z-index: 1;
 
-  overflow-y: hidden;
-
   background: linear-gradient(
-    #0000 5%,
+    180deg,
+    #000 0%,
     #fff ${ATIVATION_PERCENTAGE},
-    #222 ${ATIVATION_PERCENTAGE}
+    #444 ${ATIVATION_PERCENTAGE}
   );
 
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
+
   background-size: 3px 100%;
 
   &:after {
@@ -50,7 +50,6 @@ export const RoadmapContainer = styled.div`
     height: 120px;
     background: linear-gradient(to top, #000 0%, rgba(0, 0, 0, 0) 100%);
   }
-
 `;
 
 export const RoadmapMilestoneContainer = styled.div`
@@ -72,7 +71,7 @@ export const RoadmapMilestoneContainer = styled.div`
 export const RoadmapMilestoneTitle = styled.h2`
   text-transform: uppercase;
   margin-bottom: 15px;
-  font-size: 2.063rem;  
+  font-size: 2.063rem;
 `;
 
 export const RoadmapMilestoneCenterSquare = styled.div<RoadmapMilestoneCenterSquareProps>`

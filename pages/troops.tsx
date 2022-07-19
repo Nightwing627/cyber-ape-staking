@@ -21,6 +21,12 @@ import Image from "next/image";
 import { useRouter } from "next/router";
 import WeekDataPopup from "../components/WeekDataPopup";
 import SuperModalContext from "../contexts/SuperModal";
+import {
+  Gold,
+  Mutant,
+  Robot,
+  Black,
+} from "../components/CyberApeRenderer/Traits";
 
 const Home: NextPage<any> = () => {
   const router = useRouter();
@@ -99,7 +105,6 @@ const Home: NextPage<any> = () => {
                   width="200"
                   height="160"
                   alt="A blue ape"
-                  
                 />
                 <div className="content-cut">
                   <h2>CYBER LOCKDOWN </h2>
@@ -258,7 +263,7 @@ const Home: NextPage<any> = () => {
                 </SignatureButton>
               </div>
             </div>
-
+              
             <div className="apsec">
               {/* list item start */}
               <div className="flexitem1">
@@ -266,12 +271,11 @@ const Home: NextPage<any> = () => {
                   <h2>1</h2>
                   <h2 className="num-gray">st</h2>
                   <div className="img-sec">
-                    <Image src="/ape2.png" width="80" height="90" />
+                    <Gold width={80} height={90} />
                   </div>
-
                   <span>
-                    <p className="white-badge">Millen</p>
-                    <p className="blue-badge">@Milan0o</p>
+                      <p className="white-badge">Millen</p>
+                      <p className="blue-badge">@Milan0o</p>
                   </span>
                 </div>
                 <div className="flexitems2">
@@ -288,34 +292,26 @@ const Home: NextPage<any> = () => {
                   <h2>2</h2>
                   <h2 className="num-gray">nd</h2>
                   <div className="img-sec">
-                    <Image src="/ape2.png" width="80" height="90" />
+                    <Robot width={80} height={90} />
                   </div>
-
                   <span>
-                    <p className="white-badge">Zhxr</p>
-                    <p className="blue-badge">@Zhxrax</p>
+                    <p className="white-badge">Millen</p>
+                    <p className="blue-badge">@Milan0o</p>
                   </span>
-                </div>
-                <div className="flexitems2">
-                  <p>2m 16s</p>
-                </div>
-                <div className="flexitems2">
-                  <p>+1.5 SOL</p>
                 </div>
               </div>
               {/* list item end */}
               {/* list item start */}
               <div className="flexitem1">
                 <div className="flexitems2">
-                  <h2>3</h2>
-                  <h2 className="num-gray">rd</h2>
+                  <h2>2</h2>
+                  <h2 className="num-gray">nd</h2>
                   <div className="img-sec">
-                    <Image src="/ape2.png" width="80" height="90" />
+                    <Mutant width={80} height={90} />
                   </div>
-
                   <span>
-                    <p className="white-badge">Kiz</p>
-                    <p className="blue-badge">@KizHowarth</p>
+                    <p className="white-badge">Zhxr</p>
+                    <p className="blue-badge">@Zhxrax</p>
                   </span>
                 </div>
                 <div className="flexitems2">
@@ -332,7 +328,7 @@ const Home: NextPage<any> = () => {
                   <h2>4</h2>
                   <h2 className="num-gray">th</h2>
                   <div className="img-sec">
-                    <Image src="/ape2.png" width="80" height="90" />
+                    <Black width={80} height={90} />
                   </div>
 
                   <span>
@@ -354,7 +350,7 @@ const Home: NextPage<any> = () => {
                   <h2>5</h2>
                   <h2 className="num-gray">th</h2>
                   <div className="img-sec">
-                    <Image src="/ape2.png" width="80" height="90" />
+                    <Black width={80} height={90} />
                   </div>
 
                   <span>
@@ -376,7 +372,7 @@ const Home: NextPage<any> = () => {
                   <h2>6</h2>
                   <h2 className="num-gray">th</h2>
                   <div className="img-sec">
-                    <Image src="/ape2.png" width="80" height="90" />
+                    <Black width={80} height={90} />
                   </div>
 
                   <span>
@@ -398,7 +394,7 @@ const Home: NextPage<any> = () => {
                   <h2>7</h2>
                   <h2 className="num-gray">th</h2>
                   <div className="img-sec">
-                    <Image src="/ape2.png" width="80" height="90" />
+                    <Black width={80} height={90} />
                   </div>
 
                   <span>
@@ -420,7 +416,7 @@ const Home: NextPage<any> = () => {
                   <h2>8</h2>
                   <h2 className="num-gray">th</h2>
                   <div className="img-sec">
-                    <Image src="/ape2.png" width="80" height="90" />
+                    <Black width={80} height={90} />
                   </div>
 
                   <span>
@@ -442,7 +438,7 @@ const Home: NextPage<any> = () => {
                   <h2>9</h2>
                   <h2 className="num-gray">th</h2>
                   <div className="img-sec">
-                    <Image src="/ape2.png" width="80" height="90" />
+                    <Black width={80} height={90} />
                   </div>
 
                   <span>
@@ -464,7 +460,7 @@ const Home: NextPage<any> = () => {
                   <h2>10</h2>
                   <h2 className="num-gray">th</h2>
                   <div className="img-sec">
-                    <Image src="/ape2.png" width="80" height="90" />
+                    <Black width={80} height={90} />
                   </div>
 
                   <span>
@@ -479,9 +475,7 @@ const Home: NextPage<any> = () => {
                   <p>+0.5 SOL</p>
                 </div>
               </div>
-              {/* list item end */}
             </div>
-
           </div>
         </WelcomeHeader2>
 

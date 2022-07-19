@@ -1,12 +1,13 @@
-import { NextComponentType } from "next";
+import { NextComponentType, NextPage } from "next";
+import { MonkeyProps } from "../../types";
 
-const Robot: NextComponentType = () => {
+const Robot: NextPage<MonkeyProps> = ({ width, height }) => {
   return (
     <svg
       version="1.1"
       viewBox="0 0 48 48"
-      width={48}
-      height={48}
+      width={width || 48}
+      height={height || 48}
       preserveAspectRatio="xMidYMid meet"
       xmlns="http://www.w3.org/2000/svg"
       shapeRendering="crispEdges"

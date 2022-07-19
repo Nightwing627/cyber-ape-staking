@@ -15,7 +15,7 @@ import HubPlaceholder from "../HubPlaceholder";
 import HorizontalSlider from "../HorizontalSlider";
 
 const Hub: NextPage<HubContainerProps> = () => {
-  const { apeAmount, cyberAmount, apes } = useContext(WalletTokensContext);
+  const { apeAmount, cyberAmount /*, apes */ } = useContext(WalletTokensContext);
   const { connected, publicKey } = useWallet();
 
   return (
@@ -30,7 +30,7 @@ const Hub: NextPage<HubContainerProps> = () => {
       )}
       <HubInner>
         {!connected && <HubPlaceholder />}
-        {connected && apes.length > 0 && (
+        {connected && cyberAmount > 0 && (
           <HorizontalSlider hasControls>
             <ApesSliderContainer>
               <ApeCardContainer />

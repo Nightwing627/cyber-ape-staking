@@ -11,8 +11,8 @@ import WalletApeItem from "./WalletApeItem";
 import { getRandomApeIndex } from '../../utils'
 import { APE_DATA, SingleApeData } from '../../constants/cyberapeage-data'
 import { WALLECT_APES_LIST } from "./data"; 
-import ArrowDown from "./Arrows/ArrowDown";
-import ArrowLeft from "./Arrows/ArrowLeft";
+import ArrowDown from "../Arrows/ArrowDown";
+import ArrowLeft from "../Arrows/ArrowLeft";
 import EmptyApe from './EmptyApe'
 import {
     StakedHeader,

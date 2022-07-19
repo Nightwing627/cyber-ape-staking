@@ -26,8 +26,9 @@ import MobileMenuContext from "../../contexts/MobileMenu";
 import Link from "next/link";
 import { useConnection, useWallet } from "@solana/wallet-adapter-react";
 import WalletTokensContext from "../../contexts/WalletTokens";
+import { FusionChamberProps } from "./types";
 
-const GlobalHeader: NextPage = () => {
+const GlobalHeader: NextPage<FusionChamberProps> = ({ scrolled }) => {
   const { open } = useContext(SuperModalContext);
   const { openMobileMenu } = useContext(MobileMenuContext);
   const { apeAmount, cyberAmount } = useContext(WalletTokensContext);
@@ -48,13 +49,15 @@ const GlobalHeader: NextPage = () => {
   }
 
   useEffect(() => {
+    scrolled && setHasScrolled(true);
+
     const handleScroll = (event: any) => {
       const scrollTop = event.target.body.getBoundingClientRect().top;
 
       scrollTop !== 0 ? setHasScrolled(true) : setHasScrolled(false);
     };
 
-    window.addEventListener("scroll", handleScroll);
+    !scrolled && window.addEventListener("scroll", handleScroll);
 
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);

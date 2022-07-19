@@ -11,3 +11,8 @@ export interface CyberApeTraitContainerProps {
   isLookingRight?: boolean;
   size?: CSSProperties["width"];
 }
+
+export interface MonkeyProps {
+  width?: number;
+  height?: number;
+}
